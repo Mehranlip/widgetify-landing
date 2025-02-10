@@ -14,6 +14,7 @@ const ContributorsSection = () => {
 	const repositories = [
 		'https://api.github.com/repos/widgetify-app/widgetify-pwa/contributors',
 		'https://api.github.com/repos/sajjadmrx/btime-desktop/contributors',
+		'https://api.github.com/repos/widgetify-app/widgetify-landing/contributors',
 	]
 
 	useEffect(() => {
