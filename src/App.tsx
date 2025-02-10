@@ -81,11 +81,11 @@ const ContributorsSection = () => {
 const WidgetifyLandingPage = () => {
 	return (
 		<div className="min-h-screen text-gray-900 bg-gray-50">
-			<header className="px-4 py-16 text-center text-white bg-gradient-to-br from-blue-500 to-purple-600">
-				<h1 className="mb-4 text-4xl font-bold md:text-6xl">ویجتیفای</h1>
-				<p className="mb-8 text-xl md:text-2xl">
-					ویجت‌های هوشمند و کاربردی برای دسکتاپ و وب شما
-				</p>
+		<header className="px-4 py-16 text-center text-white bg-gradient-to-br from-yellow-500 to-amber-600">
+		<h1 className="mb-4 text-4xl font-bold md:text-6xl">ویجتیفای</h1>
+			<p className="mb-8 text-xl md:text-2xl">
+				ویجت‌های هوشمند و کاربردی برای دسکتاپ و وب شما
+			</p>
 
 				<div className="flex justify-center space-x-4 rtl:space-x-reverse">
 					<a
