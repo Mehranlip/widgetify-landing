@@ -1,5 +1,7 @@
 import { BarChart, Download, Layers, Smartphone, Zap } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 interface Contributor {
 	login: string
@@ -47,12 +49,13 @@ const ContributorsSection = () => {
 	}
 
 	return (
-		<section className="container px-4 py-16 mx-auto">
+		<section className="container px-4 py-16 mx-auto" data-aos="fade-up">
 			<div
 				className="flex flex-col items-center justify-center pb-1 mb-12 border-b border-gray-300"
 				dir="rtl"
+				data-aos="fade-up"
 			>
-				<h2 className="text-3xl font-bold text-center">مشارکت‌کنندگان</h2>
+				<h2 className="text-3xl font-bold text-center text-gray-800">مشارکت‌کنندگان</h2>
 				<p className="text-sm text-gray-500">شما هم میتونید به بهبود ویجتیفای کمک کنید</p>
 			</div>
 
@@ -63,14 +66,15 @@ const ContributorsSection = () => {
 						href={contributor.html_url}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex flex-col items-center transition-transform hover:scale-105"
+						className="flex flex-col items-center p-4 transition-transform rounded-lg hover:scale-105 hover:shadow-2xl hover:bg-transparent hover:backdrop-blur-lg"
+						data-aos="fade-up"
 					>
 						<img
 							src={contributor.avatar_url}
 							alt={contributor.login}
 							className="object-cover w-24 h-24 mb-2 rounded-full shadow-md"
 						/>
-						<p className="font-medium text-center">{contributor.login}</p>
+						<p className="font-medium text-center text-gray-700">{contributor.login}</p>
 					</a>
 				))}
 			</div>
@@ -79,20 +83,26 @@ const ContributorsSection = () => {
 }
 
 const WidgetifyLandingPage = () => {
+	useEffect(() => {
+		AOS.init({ duration: 1000 })
+	}, [])
+
 	return (
 		<div className="min-h-screen text-gray-900 bg-gray-50">
-		<header className="px-4 py-16 text-center text-white bg-gradient-to-br from-yellow-500 to-amber-600">
-		<h1 className="mb-4 text-4xl font-bold md:text-6xl">ویجتیفای</h1>
-			<p className="mb-8 text-xl md:text-2xl">
-				ویجت‌های هوشمند و کاربردی برای دسکتاپ و وب شما
-			</p>
+			<header
+				className="px-4 py-16 text-center text-white bg-gradient-to-br from-yellow-500 to-amber-600"
+				data-aos="fade-up"
+			>
+				<h1 className="mb-4 text-4xl font-bold md:text-6xl">ویجتیفای</h1>
+				<p className="mb-8 text-xl md:text-2xl">ویجت‌های هوشمند و کاربردی برای دسکتاپ و وب شما</p>
 
 				<div className="flex justify-center space-x-4 rtl:space-x-reverse">
 					<a
 						href="https://github.com/sajjadmrx/btime-desktop"
 						target="_blank"
-						className="flex items-center gap-2 px-6 py-3 text-blue-600 transition bg-white rounded-lg hover:bg-blue-100"
+						className="flex items-center gap-2 px-6 py-3 text-blue-600 transition-all bg-white rounded-lg hover:bg-blue-500 hover:text-white"
 						rel="noreferrer"
+						data-aos="fade-up"
 					>
 						<Download /> نصب نسخه دسکتاپ
 					</a>
@@ -100,31 +110,41 @@ const WidgetifyLandingPage = () => {
 					<a
 						href="https://app.widgetify.ir"
 						target="_blank"
-						className="flex items-center gap-2 px-6 py-3 text-white transition bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-blue-600"
+						className="flex items-center gap-2 px-6 py-3 text-white transition-all bg-transparent border-2 border-white rounded-lg hover:bg-blue-500 hover:text-white"
 						rel="noreferrer"
+						data-aos="fade-up"
 					>
 						<Smartphone /> نسخه وب
 					</a>
 				</div>
 			</header>
 
-			<section className="container px-4 py-16 mx-auto">
+			<section className="container px-4 py-16 mx-auto" data-aos="fade-up">
 				<h2 className="mb-12 text-3xl font-bold text-center">چرا ویجتیفای؟</h2>
 
 				<div className="grid gap-8 md:grid-cols-3">
-					<div className="p-6 text-center bg-white rounded-lg shadow-md">
+					<div
+						className="p-6 text-center bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+						data-aos="fade-up"
+					>
 						<Layers className="mx-auto mb-4 text-blue-500" size={48} />
 						<h3 className="mb-2 text-xl font-semibold">چندین پلتفرم</h3>
 						<p>اجرا در ویندوز، لینوکس، مک و مرورگرهای مختلف</p>
 					</div>
 
-					<div className="p-6 text-center bg-white rounded-lg shadow-md">
+					<div
+						className="p-6 text-center bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+						data-aos="fade-up"
+					>
 						<BarChart className="mx-auto mb-4 text-blue-500" size={48} />
 						<h3 className="mb-2 text-xl font-semibold">ویجت‌های متنوع</h3>
 						<p>از ارز و هواشناسی تا تقویم و ساعت جهانی</p>
 					</div>
 
-					<div className="p-6 text-center bg-white rounded-lg shadow-md">
+					<div
+						className="p-6 text-center bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+						data-aos="fade-up"
+					>
 						<Zap className="mx-auto mb-4 text-blue-500" size={48} />
 						<h3 className="mb-2 text-xl font-semibold">سفارشی‌سازی</h3>
 						<p>تنظیم و شخصی‌سازی آسان ویجت‌ها</p>
