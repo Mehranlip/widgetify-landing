@@ -52,7 +52,7 @@ function App() {
 			</nav>
 			
 			<div className="text-center max-w-3xl mx-auto px-4">
-				<h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">ویجتیفای: راهکار هوشمند مدیریت ویجت‌ها</h2>
+				<h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">ویجتیفای : راهکار هوشمند مدیریت ویجت‌ها</h2>
 				<p className="text-lg sm:text-xl text-gray-100">
 				با ویجتیفای، مدیریت ویجت‌های خود را به سطح جدیدی ببرید
 				</p>
