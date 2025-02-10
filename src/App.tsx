@@ -1,6 +1,6 @@
 import { BarChart, Download, Layers, Smartphone, Zap } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import AOS from 'aos'
+import * as AOS from 'aos';
 import 'aos/dist/aos.css'
 
 interface Contributor {
