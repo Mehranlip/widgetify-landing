@@ -134,7 +134,7 @@ const WidgetifyLandingPage = () => {
 			<ContributorsSection />
 
 			<footer className="py-8 text-center text-white bg-gray-800">
-				<p>© {new Date().getFullYear()} ویجتیفای. تمامی حقوق محفوظ است.</p>
+				<p dir="rtl">© {new Date().getFullYear()} ویجتیفای. تمامی حقوق محفوظ است.</p>
 			</footer>
 		</div>
 	)
