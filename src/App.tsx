@@ -87,7 +87,7 @@ const WidgetifyLandingPage = () => {
 					ویجت‌های هوشمند و کاربردی برای دسکتاپ و وب شما
 				</p>
 
-				<div className="flex justify-center space-x-4 rtl:space-x-reverse">
+				<div className="flex justify-center items-center flex-col md:flex-row space-x-4 rtl:space-x-reverse">
 					<a
 						href="https://github.com/sajjadmrx/btime-desktop"
 						target="_blank"
