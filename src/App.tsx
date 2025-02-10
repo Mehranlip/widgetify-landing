@@ -1,4 +1,5 @@
 import { BarChart, Download, Layers, Smartphone, Zap } from 'lucide-react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import * as AOS from 'aos';
 import 'aos/dist/aos.css'
@@ -8,6 +9,7 @@ interface Contributor {
 	avatar_url: string
 	html_url: string
 	contributions: number
+	linkedin_url?: string
 }
 const ContributorsSection = () => {
 	const [contributors, setContributors] = useState<Contributor[]>([])
@@ -59,25 +61,46 @@ const ContributorsSection = () => {
 				<p className="text-sm text-gray-500">شما هم میتونید به بهبود ویجتیفای کمک کنید</p>
 			</div>
 
-			<div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6">
-				{contributors.map((contributor) => (
-					<a
-						key={contributor.login}
-						href={contributor.html_url}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="flex flex-col items-center p-4 transition-transform rounded-lg hover:scale-105 hover:shadow-2xl hover:bg-transparent hover:backdrop-blur-lg"
-						data-aos="fade-up"
-					>
-						<img
-							src={contributor.avatar_url}
-							alt={contributor.login}
-							className="object-cover w-24 h-24 mb-2 rounded-full shadow-md"
-						/>
-						<p className="font-medium text-center text-gray-700">{contributor.login}</p>
-					</a>
-				))}
-			</div>
+			<div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6">{contributors.map((contributor) => (
+    <div
+		key={contributor.login}
+		className="relative flex flex-col items-center p-4 transition-all duration-300 rounded-xl bg-white/10 backdrop-blur-md shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-white/20 hover:backdrop-blur-lg group"
+		data-aos="fade-up"
+		>
+		<img
+			src={contributor.avatar_url}
+			alt={contributor.login}
+			className="relative object-cover w-24 h-24 mb-3 rounded-full shadow-md border-4 border-white transition-all duration-300 group-hover:scale-110"
+		/>
+
+		<p className="relative z-10 font-semibold text-center text-gray-900 dark:text-white transition-all duration-300 group-hover:text-black">
+			{contributor.login}
+		</p>
+
+		<div className="relative flex gap-3 mt-2 z-10">
+        <a
+			href={contributor.html_url}
+			target="_blank"
+			rel="noopener noreferrer"
+			className="text-gray-700 transition hover:text-black dark:text-gray-300 dark:hover:text-white"
+			title="Github">
+			<FaGithub size={22} />
+			</a>
+        {contributor.linkedin_url && (
+			<a
+				href={contributor.linkedin_url}
+				target="_blank"
+				rel="noopener noreferrer"
+				className="text-blue-600 transition hover:text-blue-800"
+				title="LinkedIn"
+			>
+				<FaLinkedin size={22} />
+			</a>
+			)}
+		</div>
+		</div>
+	))}
+</div>
 		</section>
 	)
 }
