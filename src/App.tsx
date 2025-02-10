@@ -8,7 +8,7 @@ interface Contributor {
 	contributions: number
 }
 const ContributorsSection = () => {
-	const [contributors, setContributors] = useState<Contributor[]>([])
+	const [contributors, setContributors] = useState<Contributor[] | null>([])
 	const [isLoading, setIsLoading] = useState(true)
 
 	const repositories = [
@@ -35,6 +35,7 @@ const ContributorsSection = () => {
 			} catch (error) {
 				console.error('Error fetching contributors:', error)
 				setIsLoading(false)
+				setContributors(null)
 			}
 		}
 
@@ -43,6 +44,10 @@ const ContributorsSection = () => {
 
 	if (isLoading) {
 		return <div className="py-8 text-center">در حال بارگذاری مشارکت‌کنندگان...</div>
+	}
+
+	if(contributors === null) {
+		return <div className="py-8 text-center text-red-500">در دریافت مشارکت کنندگان به مشکل برخوردیم.</div>
 	}
 
 	return (
