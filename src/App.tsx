@@ -65,27 +65,27 @@ const WidgetifyLandingPage = () => {
 
 				{/* Footer */}
 				<footer className="bg-gray-900 text-white py-8 sm:py-12 text-right">
-	<div className="container mx-auto px-4 sm:px-6">
-		<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-			<div>
-				<h3 className="text-lg sm:text-xl font-bold mb-4">ویجتیفای</h3>
-				<p className="text-gray-400">راهکار هوشمند مدیریت ویجت‌ها</p>
-			</div>
-			<div>
-				<h3 className="text-lg sm:text-xl font-bold mb-4">تماس با ما</h3>
-				<p className="text-gray-400">توضیحات</p>
-			</div>
-			<div>
-				<h3 className="text-lg sm:text-xl font-bold mb-4">لینک‌های مفید</h3>
-				<ul className="space-y-2 rtl:space-y-reverse text-gray-400">
-					<li>توضیحات</li>
-					<li>توضیحات</li>
-					<li>توضیحات</li>
-				</ul>
-			</div>
-		</div>
-		<div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-			<p>1403</p>
+					<div className="container mx-auto px-4 sm:px-6">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+						<div>
+							<h3 className="text-lg sm:text-xl font-bold mb-4">ویجتیفای</h3>
+							<p className="text-gray-400">راهکار هوشمند مدیریت ویجت‌ها</p>
+						</div>
+						<div>
+							<h3 className="text-lg sm:text-xl font-bold mb-4">تماس با ما</h3>
+							<p className="text-gray-400">توضیحات</p>
+						</div>
+						<div>
+							<h3 className="text-lg sm:text-xl font-bold mb-4">لینک‌های مفید</h3>
+							<ul className="space-y-2 rtl:space-y-reverse text-gray-400">
+								<li>توضیحات</li>
+								<li>توضیحات</li>
+								<li>توضیحات</li>
+							</ul>
+						</div>
+					</div>
+					<div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+						<p>1403</p>
 		</div>
 	</div>
 </footer>
