@@ -38,12 +38,7 @@ const fetchContributors = async () => {
 }
 
 const ContributorsSection = () => {
-	const {
-		data: contributors,
-		isLoading,
-		error,
-	} = useQuery('contributors', fetchContributors)
-	console.log(contributors)
+	const { data: contributors, isLoading } = useQuery('contributors', fetchContributors)
 
 	if (isLoading) {
 		return <div className="py-8 text-center">در حال بارگذاری مشارکت‌کنندگان...</div>
