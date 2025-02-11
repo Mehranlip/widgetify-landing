@@ -51,10 +51,7 @@ const ContributorsSection = () => {
 
 	return (
 		<section className="container px-4 py-16 mx-auto">
-			<div
-				className="flex flex-col items-center justify-center pb-1 mb-12 border-b border-gray-300"
-				dir="rtl"
-			>
+			<div className="flex flex-col items-center justify-center pb-1 mb-12 border-b border-gray-300">
 				<h2 className="text-3xl font-bold text-center">مشارکت‌کنندگان</h2>
 				<p className="text-sm text-gray-500">شما هم میتونید به بهبود ویجتیفای کمک کنید</p>
 			</div>
