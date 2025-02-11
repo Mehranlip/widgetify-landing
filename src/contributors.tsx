@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query'
+import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
 
 interface Contributor {
 	login: string
@@ -38,7 +38,10 @@ const fetchContributors = async () => {
 }
 
 const ContributorsSection = () => {
-	const { data: contributors, isLoading } = useQuery('contributors', fetchContributors)
+	const { data: contributors, isLoading } = useQuery({
+		queryKey: ['contributors'],
+		queryFn: fetchContributors,
+	})
 
 	if (isLoading) {
 		return <div className="py-8 text-center">در حال بارگذاری مشارکت‌کنندگان...</div>
