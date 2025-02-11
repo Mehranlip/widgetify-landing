@@ -85,7 +85,7 @@ const WidgetifyLandingPage = () => {
 						</div>
 					</div>
 					<div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-						<p>1403</p>
+						<p>© تمامی حقوق برای ویجتیفای محفوظ است</p>
 		</div>
 	</div>
 </footer>
