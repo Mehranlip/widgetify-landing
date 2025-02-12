@@ -1,5 +1,5 @@
-import { CheckCircle2, Download, Smartphone } from 'lucide-react'
-import { FaDiscord, FaTelegram } from 'react-icons/fa'
+import { FaCheckCircle, FaDiscord, FaDownload, FaTelegram } from 'react-icons/fa'
+import { LuSmartphone } from 'react-icons/lu'
 import ContributorsSection from './contributors'
 
 const features = [
@@ -25,7 +25,7 @@ const WidgetifyLandingPage = () => {
 						className="flex items-center gap-2 px-6 py-3 text-blue-600 transition bg-white rounded-lg hover:bg-blue-100"
 						rel="noreferrer"
 					>
-						<Download /> نصب نسخه دسکتاپ
+						<FaDownload /> نصب نسخه دسکتاپ
 					</a>
 
 					<a
@@ -34,7 +34,7 @@ const WidgetifyLandingPage = () => {
 						className="flex items-center gap-2 px-6 py-3 text-white transition bg-transparent border-2 border-white rounded-lg hover:bg-white hover:text-blue-600"
 						rel="noreferrer"
 					>
-						<Smartphone /> نسخه وب
+						<LuSmartphone /> نسخه وب
 					</a>
 				</div>
 			</header>
@@ -51,7 +51,7 @@ const WidgetifyLandingPage = () => {
 								key={index}
 								className="flex flex-row-reverse items-center gap-4 p-4 transition-all border border-gray-200 rounded-lg sm:p-6 hover:shadow-lg"
 							>
-								<CheckCircle2 className="flex-shrink-0 text-purple-600" />
+								<FaCheckCircle className="flex-shrink-0 text-purple-600" />
 								<span className="text-base sm:text-lg">{feature}</span>
 							</div>
 						))}
