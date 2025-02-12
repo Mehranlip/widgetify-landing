@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query'
 
 interface Contributor {
 	login: string
@@ -11,6 +11,7 @@ const fetchContributors = async () => {
 	const repositories = [
 		'https://api.github.com/repos/widgetify-app/widgetify-pwa/contributors',
 		'https://api.github.com/repos/sajjadmrx/btime-desktop/contributors',
+		'https://api.github.com/repos/widgetify-app/widgetify-landing/contributors',
 	]
 
 	const contributorsData = await Promise.all(
