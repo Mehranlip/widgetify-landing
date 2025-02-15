@@ -31,9 +31,20 @@ const fetchContributors = async () => {
 		}),
 	)
 
-	const uniqueContributors = Array.from(
-		new Map(contributorsData.flat().map((c) => [c.login, c])).values(),
-	).sort((a, b) => b.contributions - a.contributions)
+	const contributorMap = new Map()
+	// biome-ignore lint/complexity/noForEach: <explanation>
+	contributorsData.flat().forEach((contributor) => {
+		if (contributorMap.has(contributor.login)) {
+			const existing = contributorMap.get(contributor.login)
+			existing.contributions += contributor.contributions
+		} else {
+			contributorMap.set(contributor.login, { ...contributor })
+		}
+	})
+
+	const uniqueContributors = Array.from(contributorMap.values()).sort(
+		(a, b) => b.contributions - a.contributions,
+	)
 
 	return uniqueContributors
 }
