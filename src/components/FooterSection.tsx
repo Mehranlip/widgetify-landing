@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
 	DESKTOP_LINK,
 	DISCORD_LINK,
@@ -62,6 +63,11 @@ export default function FooterSection() {
 				<li className="py-8 space-y-2">
 					<h3>لینک‌های مفید</h3>
 					<ul className="space-y-1">
+						<li className="text-sm font-light transition text-neutral-500 hover:text-neutral-900">
+							<Link to="/donate" className="transition">
+								حمایت از ما
+							</Link>
+						</li>
 						<li className="text-sm font-light transition text-neutral-500 hover:text-neutral-900">
 							<a target="_blank" rel="noopener noreferrer" href={PWA_LINK}>
 								نسخه وب

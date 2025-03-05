@@ -1,22 +1,14 @@
-import ContributorsSection from "./components/ContributorsSection";
-import FeaturesSection from "./components/FeaturesSection";
-import FixedBackground from "./components/FixedBackground";
-import FooterSection from "./components/FooterSection";
-import HeroSection from "./components/HeroSection";
-import WidgetsSection from "./components/WidgetsSection";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Donate from './pages/Donate'
+import Home from './pages/Home'
 
 export default function App() {
-  return (
-    <>
-      <FixedBackground />
-      <HeroSection />
-
-      <div className="max-w-lg mx-auto space-y-16 px-4">
-        <FeaturesSection />
-        <WidgetsSection />
-        <ContributorsSection />
-        <FooterSection />
-      </div>
-    </>
-  );
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/donate" element={<Donate />} />
+			</Routes>
+		</BrowserRouter>
+	)
 }
